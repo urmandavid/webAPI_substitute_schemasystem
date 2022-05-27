@@ -8,23 +8,24 @@ import java.sql.*;
  */
 public class DBHelper {
 
-  private static Connection con;
-  static {
-    try {
-      con = DriverManager.getConnection("jdbc:sqlite:www/WEB-INF/resources/vikarie.db");
-    } catch (SQLException e) {
-      System.err.println("Error getting connection: " + e.getMessage());
-    }
-  }
+    private static Connection con;
 
-  public ResultSet fetch(String SQL) {
-    try {
-      //System.out.println("SQL:\n" + SQL);
-      Statement stm = con.createStatement();
-      return stm.executeQuery(SQL);
-    } catch (SQLException e) {
-      System.err.println("Error reading from DB: " + e.getMessage());
-      return null;
+    static {
+        try {
+            con = DriverManager.getConnection("jdbc:sqlite:www/WEB-INF/resources/vikarie.db");
+        } catch (SQLException e) {
+            System.err.println("Error getting connection: " + e.getMessage());
+        }
     }
-  }
+
+    public ResultSet fetch(String SQL) {
+        try {
+            //System.out.println("SQL:\n" + SQL);
+            Statement stm = con.createStatement();
+            return stm.executeQuery(SQL);
+        } catch (SQLException e) {
+            System.err.println("Error reading from DB: " + e.getMessage());
+            return null;
+        }
+    }
 }
