@@ -1,6 +1,8 @@
 /.idea/
 my-lab.iml
-
+/www/WEB-INF/classes/se/yrgo/schedule/*.class
+/www/WEB-INF/classes/se/yrgo/schedule/XmlFormatter.java
+www/WEB-INF/classes/se/yrgo/schedule/XmlFormatter.java
 # Default ignored files
 /shelf/
 /.idea/workspace.xml
@@ -11,3 +13,4 @@ my-lab.iml
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+
