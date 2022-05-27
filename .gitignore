@@ -1,6 +1,7 @@
-# Default ignored files
 /.idea/
-/my-lab.iml
+my-lab.iml
+
+# Default ignored files
 /shelf/
 /.idea/workspace.xml
 
