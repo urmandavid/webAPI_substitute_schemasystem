@@ -59,7 +59,7 @@ public class ScheduleServlet extends HttpServlet {
             System.err.println("Error: " + e);
             e.printStackTrace();
         }
-        // Get a formatter, by asking the parser for the format (defaults to HTML)
+        // Get a formatter, by asking the parser for the format
         try {
             Formatter formatter = FormatterFactory.getFormatter(parser.format());
             // Format the result to the format according to the parser:

@@ -11,9 +11,9 @@ public class FormatterFactory {
     /**
      * Returns a formatter for the given contentType
      *
-     * @param -The content type you want to format to (HTML is the only implemented)
+     * @param -The content type you want to format to (JSON and XML implemented..)
      * @return -A Formatter of the correct type, depending on the provided
-     * contentType. Defaults to HTML. Cannot handle null.
+     * contentType. Throws IllegalArgumentException if argument is not XML or JSON.
      */
     public static Formatter getFormatter(String contentType) {
         if (contentType.equalsIgnoreCase("xml")) {

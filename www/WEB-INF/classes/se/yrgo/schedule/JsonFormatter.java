@@ -9,7 +9,11 @@ import java.util.List;
 public class JsonFormatter implements Formatter {
     public String format(List<Assignment> assignments) {
         return "[ { \"some-key\": \"some-value\" } ]";
-        /*
+    }
+}
+
+/* FOR HtmlFormatter.java:
+
         StringBuffer html = new StringBuffer("<!DOCTYPE html>\n")
                 .append("<html lang=\"en\">\n")
                 .append("<head><title>Substitutes R Us - Schedule API</title></head>\n")
@@ -30,5 +34,3 @@ public class JsonFormatter implements Formatter {
         html.append("</html>\n");
         return html.toString();
         */
-    }
-}
