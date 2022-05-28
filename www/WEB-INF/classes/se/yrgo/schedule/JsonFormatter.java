@@ -41,8 +41,6 @@ public class JsonFormatter implements Formatter {
                 .put("address", assignment.school().address());
         // Put the JSONSchool in the JSONAssignment object with the key "school"
         JSONAssignment.put("school", JSONSchool);
-
         return JSONAssignment;
     }
-
 }

@@ -5,7 +5,7 @@ package se.yrgo.schedule;
  */
 public class FormatterFactory {
 
-    private static Formatter XML_FORMATTER = new XmlFormatter();
+    private static Formatter XML_FORMATTER = new XMLFormatter();
     private static Formatter JSON_FORMATTER = new JsonFormatter();
 
     /**
