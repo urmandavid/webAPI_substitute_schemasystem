@@ -29,7 +29,7 @@ public class JsonFormatter implements Formatter {
         // Create a new empty JSONObject called JSONSubstitute
         JSONObject JSONSubstitute = new JSONObject();
         // Put the key "name" in that object, and the value from the assignment's teacher's name
-        JSONSubstitute.put("name", assignment.teacher());
+        JSONSubstitute.put("name", assignment.teacher().name());
         // Put the JSONSubstitute object in the JSONAssignment object with the key "substitute"
         JSONAssignment.put("substitute", JSONSubstitute);
 
@@ -37,8 +37,8 @@ public class JsonFormatter implements Formatter {
         JSONObject JSONSchool = new JSONObject();
         // Put the key "school_name" in that object and the value from the assignment's school's name
         // Put the key "address" in that object and the value from the assignment's school's address
-        JSONSchool.put("school_name", assignment.school())
-                .put("address", assignment.school());
+        JSONSchool.put("school_name", assignment.school().name())
+                .put("address", assignment.school().address());
         // Put the JSONSchool in the JSONAssignment object with the key "school"
         JSONAssignment.put("school", JSONSchool);
 
