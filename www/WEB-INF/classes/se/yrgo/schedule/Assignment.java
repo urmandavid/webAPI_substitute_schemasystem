@@ -56,14 +56,13 @@ public class Assignment {
      *
      * @return This Assignment represented as a String
      */
-
     @Override
     public String toString() {
         return new StringBuilder(date)
                 .append(" (").append(teacher.name()).append(")")
-                .append(" at ").append(school.name())
-                .append(", address: ").append(school.address())
-                .append(", date: ").append(date)
+                .append(" at ").append(school.name()).append(")")
+                .append(" at ").append(school.address())
                 .toString();
     }
+
 }

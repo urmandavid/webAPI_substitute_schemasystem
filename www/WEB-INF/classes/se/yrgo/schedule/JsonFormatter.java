@@ -44,4 +44,5 @@ public class JsonFormatter implements Formatter {
 
         return JSONAssignment;
     }
+
 }

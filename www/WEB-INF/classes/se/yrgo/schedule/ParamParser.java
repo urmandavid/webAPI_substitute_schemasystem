@@ -126,7 +126,7 @@ public class ParamParser {
     }
 
     /**
-     * Returns this parser as a String representation. Mostly for debuggin.
+     * Returns this parser as a String representation. Mostly for debugging.
      *
      * @return This ParamParser as a String representation.
      */
