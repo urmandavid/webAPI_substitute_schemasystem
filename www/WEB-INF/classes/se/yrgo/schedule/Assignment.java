@@ -1,15 +1,15 @@
 package se.yrgo.schedule;
 
 /**
- * Represents an assignment for at substitute teacher,
+ * Represents an assignment for a substitute teacher,
  * with information on the date of the assignment (including
  * start time), the teacher's name and the school of the
- * assignment (the school where the teacher should teach).
+ * assignment (the school where the substitute will teach).
  */
 public class Assignment {
-    private String teacher;
+    private Substitute teacher;
     private String date;
-    private String school;
+    private School school;
 
     /**
      * Creates a new Assignment
@@ -18,7 +18,7 @@ public class Assignment {
      * @param date    The date of this Assignment
      * @param school  The school of this Assignment
      */
-    public Assignment(String teacher, String date, String school) {
+    public Assignment(Substitute teacher, String date, School school) {
         this.teacher = teacher;
         this.date = date;
         this.school = school;
@@ -29,7 +29,7 @@ public class Assignment {
      *
      * @return This Assignment's teacher's name
      */
-    public String teacher() {
+    public Substitute teacher() {
         return this.teacher;
     }
 
@@ -47,7 +47,7 @@ public class Assignment {
      *
      * @return This Assignment's school
      */
-    public String school() {
+    public School school() {
         return this.school;
     }
 
@@ -56,11 +56,14 @@ public class Assignment {
      *
      * @return This Assignment represented as a String
      */
+
     @Override
     public String toString() {
         return new StringBuilder(date)
-                .append(" (").append(teacher).append(")")
-                .append(" at ").append(school)
+                .append(" (").append(teacher.name()).append(")")
+                .append(" at ").append(school.name())
+                .append(", address: ").append(school.address())
+                .append(", date: ").append(date)
                 .toString();
     }
 }
