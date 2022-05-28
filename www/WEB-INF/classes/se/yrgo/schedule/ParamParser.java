@@ -98,7 +98,7 @@ public class ParamParser {
     }
 
     /**
-     * Returns the day paramteter of the request
+     * Returns the day parameter of the request
      *
      * @return The day parameter of the request, as a String, or null if none is given
      */
