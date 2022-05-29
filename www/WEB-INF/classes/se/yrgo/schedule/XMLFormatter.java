@@ -36,25 +36,42 @@ public class XMLFormatter implements Formatter {
                 Element rootElement = doc.createElement("schedules");
                 doc.appendChild(rootElement);
 
-                //For-each loop to create XML
+                //Adding child elements
                 for (Assignment assignment : assignments) {
                     // Create an Element schedule using doc.createElement("schedule")
+                    Element schedule = doc.createElement("schedule");
                     // set the attribute "date" on this schedule (use this assignment's date)
-                    // Create an Element school the same way
-                    // Create an Element schoolName the same way
+                    schedule.setAttribute("date", assignment.date());
+
+                    // Create Elements school & schoolName the same way
+                    Element school = doc.createElement("school");
+                    Element schoolName = doc.createElement("schoolName");
                     // add a text node to schoolName and use the assignment's school's name
                     //    to create a textNode, use doc.createTextNode(the text as a string);
+                    schoolName.appendChild(doc.createTextNode(assignment.school().name()));
                     // add schoolName as a child to school
+                    school.appendChild(schoolName);
+
                     // Create an Element address the same way as above
+                    Element address = doc.createElement("address");
                     // append a textNode to address with the assignment's school's address
+                    address.appendChild(doc.createTextNode(assignment.school().address()));
                     // append address as a child to school
+                    school.appendChild(address);
                     // Append the whole school as a child to schedule
-                    // Create an Element substitute
-                    // Create an element Element name
+                    schedule.appendChild(school);
+
+                    // Create Elements substitute & name
+                    Element substitute = doc.createElement("substitute");
+                    Element name = doc.createElement("name");
                     // Append a text node to name with the assignment's teacher's name
+                    name.appendChild(doc.createTextNode(assignment.teacher().name()));
                     // Append name as a child to substitute
+                    substitute.appendChild(name);
                     // Append the whole substitute as a child to schedule
+                    schedule.appendChild(substitute);
                     // Append the whole schedule as a child to rootElement
+                    rootElement.appendChild(schedule);
                 }
 
                 StringWriter xml = new StringWriter();
