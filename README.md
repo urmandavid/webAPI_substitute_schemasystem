@@ -1,5 +1,5 @@
 # webAPI_substitute_schemasystem
-Systemintegration - Student assignment
+System integration - Student assignment
 
 - Run the script to compile and start wintsone in a terminal (I use WSL2 Ubuntu).
 - Make requests to the API via **terminal**, postman/insomnia or type the URL in a browser.
