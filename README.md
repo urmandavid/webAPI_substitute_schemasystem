@@ -1,7 +1,7 @@
 # webAPI_substitute_schemasystem
 System integration - Student assignment
 
-- Run the script to compile and start wintsone in a terminal (I use WSL2 Ubuntu).
+- Run the script to compile and start wintsone in a terminal ( I use WSL2 Ubuntu ).
 - Make requests to the API via **terminal**, postman/insomnia or type the URL in a browser.
 - ( **eg. lwp-request -m GET -e 'http://localhost:8080/v1?format=json'** , 
 - or **'..?format=xml'** )
